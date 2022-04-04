@@ -1,12 +1,6 @@
 require('dotenv').config();
-const express = require('express');
-const app     = express();
-const port    = process.env.PORT;
+const Server = require('./models/server');
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+const server = new Server();
 
-app.listen(port, () => {
-    console.log(`Example app listening on http://localhost:${port}`)
-});
+server.listen();
