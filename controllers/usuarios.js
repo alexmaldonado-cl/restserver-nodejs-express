@@ -1,6 +1,6 @@
-const { response } = require('express');
+const { response, request } = require('express');
 
-const usuariosGet = (req, res = response) => {
+const usuariosGet = (req = request, res = response) => {
     const {s, nombre = 'Anonimo', page = 1, limit = 10} = req.query;
     res.json({
         msg: 'get API - Controller',
