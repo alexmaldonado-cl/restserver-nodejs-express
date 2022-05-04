@@ -31,8 +31,8 @@ const usuariosPost = async (req, res = response) => {
     usuario.password = bcryptjs.hashSync(password, salt);
 
     await usuario.save();
+
     res.json({
-        msg: 'post API - Controller',
         usuario
     });
 };
